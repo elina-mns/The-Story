@@ -9,12 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var buttonOne: UIButton!
+    @IBOutlet weak var buttonTwo: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        roundCorners(for: buttonOne)
+        roundCorners(for: buttonTwo)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Start Over", style: .plain, target: self, action: #selector(ViewController.startOver))
     }
-
-
+    
+    func roundCorners(for button: UIButton) {
+        button.backgroundColor = .clear
+        button.layer.cornerRadius = 13
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.gray.cgColor
+    }
+    
+    @objc func startOver() {
+    if let navigationController = self.navigationController {
+        navigationController.popToRootViewController(animated: true)
+    }
+}
 }
 

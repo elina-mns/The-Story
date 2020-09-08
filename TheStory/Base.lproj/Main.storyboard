@@ -1,24 +1,585 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EX5-G2-Bf0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="U1O-Uk-4nF">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="EX5-G2-Bf0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xBC-AO-ds4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Rr7-og-9oo" kind="relationship" relationship="rootViewController" id="szf-xI-Qdw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xsc-7g-Yfx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-184" y="88"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9x7-zN-Odf">
+            <objects>
+                <viewController id="Rr7-og-9oo" customClass="ViewController" customModule="TheStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iAR-dU-bDv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="vxq-sg-XSJ">
+                                <rect key="frame" x="34" y="556.5" width="346" height="170"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abE-JI-XxO">
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="40"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="  Leap through the door  ">
+                                                    <attributes>
+                                                        <color key="NSColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <font key="NSFont" size="22" name="Chalkduster"/>
+                                                        <font key="NSOriginalFont" size="24" name="Chalkduster"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="lio-O0-RAh" kind="show" id="oYs-rD-CXG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ExQ-lo-XD3">
+                                        <rect key="frame" x="0.0" y="90" width="346" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Pkj-gF-mkW"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="  ">
+                                                    <attributes>
+                                                        <color key="NSColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <font key="NSFont" size="22" name="Chalkduster"/>
+                                                        <font key="NSOriginalFont" size="24" name="Chalkduster"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Stalk to the door, pick down the hallway">
+                                                    <attributes>
+                                                        <color key="NSColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <font key="NSFont" size="22" name="Chalkduster"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="  ">
+                                                    <attributes>
+                                                        <color key="NSColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <font key="NSFont" size="22" name="Chalkduster"/>
+                                                        <font key="NSOriginalFont" size="24" name="Chalkduster"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jqP-kj-Nhp" kind="show" id="KFP-sy-gGx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5lt-fK-ZHg">
+                                <rect key="frame" x="20" y="135" width="374" height="335.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="An immense tiger wakes in an empty room.   A door opens into a hallway...  What should she do? ">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.94920414149999999" blue="0.84146326010000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="28" name="Chalkduster"/>
+                                            <font key="NSOriginalFont" size="28" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5lt-fK-ZHg" firstAttribute="top" secondItem="FAB-A7-hbu" secondAttribute="top" constant="47" id="H2P-5h-QnJ"/>
+                            <constraint firstItem="vxq-sg-XSJ" firstAttribute="top" secondItem="5lt-fK-ZHg" secondAttribute="bottom" constant="86" id="PSD-Ly-JRp"/>
+                            <constraint firstItem="vxq-sg-XSJ" firstAttribute="leading" secondItem="FAB-A7-hbu" secondAttribute="leading" constant="34" id="ZuU-h6-bV3"/>
+                            <constraint firstItem="5lt-fK-ZHg" firstAttribute="trailing" secondItem="iAR-dU-bDv" secondAttribute="trailingMargin" id="a4p-DB-g23"/>
+                            <constraint firstItem="FAB-A7-hbu" firstAttribute="bottom" secondItem="vxq-sg-XSJ" secondAttribute="bottom" constant="135.5" id="aSl-XF-7lR"/>
+                            <constraint firstItem="vxq-sg-XSJ" firstAttribute="trailing" secondItem="FAB-A7-hbu" secondAttribute="trailing" constant="-34" id="fkM-fw-oYB"/>
+                            <constraint firstItem="5lt-fK-ZHg" firstAttribute="leading" secondItem="iAR-dU-bDv" secondAttribute="leadingMargin" id="nsB-ge-1Hk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FAB-A7-hbu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pgu-Nt-Z2b"/>
+                    <connections>
+                        <outlet property="buttonOne" destination="abE-JI-XxO" id="wI5-wy-F7Y"/>
+                        <outlet property="buttonTwo" destination="ExQ-lo-XD3" id="nWP-Fj-mrM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssl-uH-oBX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="88"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NeX-hE-YAW">
+            <objects>
+                <viewController id="lio-O0-RAh" customClass="ViewController" customModule="TheStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3kp-GF-Oh7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PkD-zo-Z7E">
+                                <rect key="frame" x="20" y="179" width="374" height="364.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">An old man is startled out of his chair. But he recovers, and aims his rifle right at the tiger with a smile.   What should she do? </string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.94920414149999999" blue="0.84146326010000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="28" name="Chalkduster"/>
+                                            <font key="NSOriginalFont" size="28" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="omV-RZ-Suz">
+                                <rect key="frame" x="34" y="592" width="346" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-Hj-EXH">
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="kDs-Tc-2Iu"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="  Wait to see what happens next">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.35078002977352596" green="0.34908544025771182" blue="0.3524746192893401" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="22" name="Chalkduster"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="G9l-rO-Pjs" kind="show" id="LSr-XI-ueq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eom-Tv-iTh">
+                                        <rect key="frame" x="0.0" y="110" width="346" height="40"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Attack the old man">
+                                                    <attributes>
+                                                        <color key="NSColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <font key="NSFont" size="22" name="Chalkduster"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="LBs-ax-Eoe" kind="show" id="cov-yu-bIT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PkD-zo-Z7E" firstAttribute="leading" secondItem="3kp-GF-Oh7" secondAttribute="leadingMargin" id="TrW-fT-ffr"/>
+                            <constraint firstItem="PkD-zo-Z7E" firstAttribute="top" secondItem="wm2-rY-JLF" secondAttribute="top" constant="91" id="Xfe-wQ-j8K"/>
+                            <constraint firstItem="wm2-rY-JLF" firstAttribute="bottom" secondItem="omV-RZ-Suz" secondAttribute="bottom" constant="120" id="a7G-N4-ylh"/>
+                            <constraint firstItem="PkD-zo-Z7E" firstAttribute="trailing" secondItem="3kp-GF-Oh7" secondAttribute="trailingMargin" id="cYc-Jx-agY"/>
+                            <constraint firstAttribute="trailing" secondItem="omV-RZ-Suz" secondAttribute="trailing" constant="34" id="gH4-zf-gfl"/>
+                            <constraint firstItem="omV-RZ-Suz" firstAttribute="top" secondItem="PkD-zo-Z7E" secondAttribute="bottom" constant="48.5" id="uvT-Og-4Hj"/>
+                            <constraint firstItem="omV-RZ-Suz" firstAttribute="leading" secondItem="wm2-rY-JLF" secondAttribute="leading" constant="34" id="x25-bB-eFT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wm2-rY-JLF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XT4-Fv-Uvv"/>
+                    <connections>
+                        <outlet property="buttonOne" destination="hAK-Hj-EXH" id="oWd-6W-2In"/>
+                        <outlet property="buttonTwo" destination="Eom-Tv-iTh" id="Fvc-EH-5D5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FvQ-pZ-Cwo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1476.8115942028987" y="-98.4375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sH5-5U-kIj">
+            <objects>
+                <viewController id="jqP-kj-Nhp" customClass="ViewController" customModule="TheStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="842-Bf-8p6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJO-JL-vln">
+                                <rect key="frame" x="47" y="543" width="327" height="43"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Attack the old man">
+                                            <attributes>
+                                                <color key="NSColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <font key="NSFont" size="24" name="Chalkduster"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="mWU-b9-4vQ" kind="show" id="Nr2-ko-XXv"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PtD-P4-anp">
+                                <rect key="frame" x="47" y="135" width="327" height="322"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="An old man sleeps on a chair in the hallway. He has a rifle. ">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.94920414149999999" blue="0.84146326010000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="28" name="Chalkduster"/>
+                                            <font key="NSOriginalFont" size="28" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESh-fH-Kv2">
+                                <rect key="frame" x="47" y="686" width="327" height="43"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="  Pad quietly down the hallway">
+                                            <attributes>
+                                                <color key="NSColor" red="0.44664464412094884" green="0.44448694052616167" blue="0.44880234771573602" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="24" name="Chalkduster"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="WsZ-kG-Sml" kind="show" id="kng-w0-wcj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="eJO-JL-vln" secondAttribute="bottom" constant="310" id="4yE-hP-EbR"/>
+                            <constraint firstItem="eJO-JL-vln" firstAttribute="trailing" secondItem="ESh-fH-Kv2" secondAttribute="trailing" id="7oc-c2-46A"/>
+                            <constraint firstItem="PtD-P4-anp" firstAttribute="leading" secondItem="842-Bf-8p6" secondAttribute="leadingMargin" id="NQ8-CI-TCc"/>
+                            <constraint firstItem="PtD-P4-anp" firstAttribute="top" secondItem="cr9-Vw-VBX" secondAttribute="top" constant="91" id="WlV-ca-8zT"/>
+                            <constraint firstItem="eJO-JL-vln" firstAttribute="leading" secondItem="PtD-P4-anp" secondAttribute="leading" id="WxC-LF-X0M"/>
+                            <constraint firstItem="cr9-Vw-VBX" firstAttribute="trailing" secondItem="eJO-JL-vln" secondAttribute="trailing" constant="21" id="bOZ-ya-3my"/>
+                            <constraint firstItem="PtD-P4-anp" firstAttribute="trailing" secondItem="842-Bf-8p6" secondAttribute="trailingMargin" id="cC3-cm-Gtc"/>
+                            <constraint firstItem="eJO-JL-vln" firstAttribute="leading" secondItem="ESh-fH-Kv2" secondAttribute="leading" id="eEf-5r-Efo"/>
+                            <constraint firstItem="ESh-fH-Kv2" firstAttribute="height" secondItem="842-Bf-8p6" secondAttribute="height" multiplier="0.0479911" constant="70" id="fbJ-Fi-Ov7"/>
+                            <constraint firstItem="cr9-Vw-VBX" firstAttribute="bottom" secondItem="ESh-fH-Kv2" secondAttribute="bottom" constant="133" id="jRF-rJ-iqt"/>
+                            <constraint firstItem="eJO-JL-vln" firstAttribute="top" secondItem="PtD-P4-anp" secondAttribute="bottom" constant="86" id="wPB-Gf-dtW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cr9-Vw-VBX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UVu-67-eFx"/>
+                    <connections>
+                        <outlet property="buttonOne" destination="eJO-JL-vln" id="xhj-Hq-4fr"/>
+                        <outlet property="buttonTwo" destination="ESh-fH-Kv2" id="ZXa-Jf-FMP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5L-u6-ZGR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1476.8115942028987" y="631.47321428571422"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="N0E-jd-fXr">
+            <objects>
+                <viewController id="G9l-rO-Pjs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ySA-Iu-WG5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1E-fe-Klm">
+                                <rect key="frame" x="20" y="288" width="374" height="374"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="The old man offers a raw steak, which the tiger eats.   She wakes in a room, without an open door.  ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="28" name="Chalkduster"/>
+                                            <font key="NSOriginalFont" size="28" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W1E-fe-Klm" firstAttribute="centerX" secondItem="3kj-mo-paW" secondAttribute="centerX" id="UBW-na-Uox"/>
+                            <constraint firstItem="W1E-fe-Klm" firstAttribute="leading" secondItem="ySA-Iu-WG5" secondAttribute="leadingMargin" id="hMR-xz-qmf"/>
+                            <constraint firstItem="W1E-fe-Klm" firstAttribute="top" secondItem="3kj-mo-paW" secondAttribute="top" constant="200" id="pV8-mb-aII"/>
+                            <constraint firstItem="W1E-fe-Klm" firstAttribute="trailing" secondItem="ySA-Iu-WG5" secondAttribute="trailingMargin" id="rx4-sI-TCW"/>
+                            <constraint firstItem="W1E-fe-Klm" firstAttribute="centerY" secondItem="3kj-mo-paW" secondAttribute="centerY" id="xle-Px-0xY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3kj-mo-paW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QxV-wZ-I1B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8on-zE-pZu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2441" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="g1j-S5-zmO">
+            <objects>
+                <viewController id="LBs-ax-Eoe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yU0-f3-zeS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBa-yX-xa6">
+                                <rect key="frame" x="20" y="288" width="374" height="374"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Unblinking, the man fires his rifle, and a dart stings the Tiger.   She wakes in the room, but the door is now closed. ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="28" name="Chalkduster"/>
+                                            <font key="NSOriginalFont" size="28" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eBa-yX-xa6" firstAttribute="leading" secondItem="yU0-f3-zeS" secondAttribute="leadingMargin" id="1TR-t9-bmx"/>
+                            <constraint firstItem="eBa-yX-xa6" firstAttribute="centerY" secondItem="N7O-g8-s1b" secondAttribute="centerY" id="Lo5-t3-4ET"/>
+                            <constraint firstItem="eBa-yX-xa6" firstAttribute="top" secondItem="N7O-g8-s1b" secondAttribute="top" constant="200" id="YJf-7T-Ps4"/>
+                            <constraint firstItem="eBa-yX-xa6" firstAttribute="centerX" secondItem="N7O-g8-s1b" secondAttribute="centerX" id="cYC-hK-IzN"/>
+                            <constraint firstItem="eBa-yX-xa6" firstAttribute="trailing" secondItem="yU0-f3-zeS" secondAttribute="trailingMargin" id="reB-rZ-efZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N7O-g8-s1b"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sgc-JD-w7K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LHR-S5-QXK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2441" y="171"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zht-1U-myL">
+            <objects>
+                <viewController id="mWU-b9-4vQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UaL-9t-Brh" customClass="ViewController6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WPv-H1-Fn4">
+                                <rect key="frame" x="20" y="288" width="374" height="322"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">There is mayhem. And cries, and eventually a hail of darts.   When it is over, the tiger wakes again in a room, without an open door. </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="28" name="Chalkduster"/>
+                                            <font key="NSOriginalFont" size="28" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WPv-H1-Fn4" firstAttribute="trailing" secondItem="UaL-9t-Brh" secondAttribute="trailingMargin" id="V5Q-JD-5tE"/>
+                            <constraint firstItem="WPv-H1-Fn4" firstAttribute="top" secondItem="ypb-zM-VUR" secondAttribute="top" constant="91" id="v79-g6-bz1"/>
+                            <constraint firstItem="WPv-H1-Fn4" firstAttribute="leading" secondItem="UaL-9t-Brh" secondAttribute="leadingMargin" id="vrZ-WF-mHl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ypb-zM-VUR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="es3-vq-k4k"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jG-cx-qd4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2441" y="877"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3yT-gy-c00">
+            <objects>
+                <viewController id="WsZ-kG-Sml" customClass="ViewController" customModule="TheStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sGB-tc-hdZ" customClass="ViewController7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nX-qK-Kff">
+                                <rect key="frame" x="47" y="543" width="327" height="43"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Check out the kitchen">
+                                            <attributes>
+                                                <color key="NSColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <font key="NSFont" size="24" name="Chalkduster"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="utP-CS-Xsn" kind="show" id="gH2-lz-3cO"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LN8-op-sJs">
+                                <rect key="frame" x="47" y="135" width="327" height="338"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="At the end of the hallway there are two doors.   One smells like a kitchen, the other smells like the tiger's native forest. ">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.94920414149999999" blue="0.84146326010000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="28" name="Chalkduster"/>
+                                            <font key="NSOriginalFont" size="28" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qls-Kd-EUc">
+                                <rect key="frame" x="19" y="686.5" width="374" height="42.5"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Try for the forest">
+                                            <attributes>
+                                                <color key="NSColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <font key="NSFont" size="24" name="Chalkduster"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="7Ol-Zx-rwu" kind="show" id="AxY-Ii-M0g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LN8-op-sJs" firstAttribute="leading" secondItem="2nX-qK-Kff" secondAttribute="leading" id="1fc-pb-5hf"/>
+                            <constraint firstItem="S95-F8-IhY" firstAttribute="trailing" secondItem="qls-Kd-EUc" secondAttribute="trailing" constant="21" id="Qmr-vC-WIr"/>
+                            <constraint firstAttribute="bottom" secondItem="2nX-qK-Kff" secondAttribute="bottom" constant="310" id="Rk0-vn-JuG"/>
+                            <constraint firstItem="qls-Kd-EUc" firstAttribute="leading" secondItem="S95-F8-IhY" secondAttribute="leading" constant="19" id="VgY-wo-WvB"/>
+                            <constraint firstItem="2nX-qK-Kff" firstAttribute="top" secondItem="LN8-op-sJs" secondAttribute="bottom" constant="70" id="Vux-sv-jlK"/>
+                            <constraint firstItem="LN8-op-sJs" firstAttribute="top" secondItem="S95-F8-IhY" secondAttribute="top" constant="47" id="WNW-WH-NXe"/>
+                            <constraint firstItem="S95-F8-IhY" firstAttribute="trailing" secondItem="2nX-qK-Kff" secondAttribute="trailing" constant="40" id="ncF-Ou-faP"/>
+                            <constraint firstItem="S95-F8-IhY" firstAttribute="bottom" secondItem="qls-Kd-EUc" secondAttribute="bottom" constant="133" id="r7U-Vm-geK"/>
+                            <constraint firstItem="2nX-qK-Kff" firstAttribute="leading" secondItem="S95-F8-IhY" secondAttribute="leading" constant="47" id="u70-HJ-ePM"/>
+                            <constraint firstItem="LN8-op-sJs" firstAttribute="trailing" secondItem="2nX-qK-Kff" secondAttribute="trailing" id="zxv-lo-9KW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="S95-F8-IhY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dSm-OR-5pj"/>
+                    <connections>
+                        <outlet property="buttonOne" destination="2nX-qK-Kff" id="Hvr-6m-HKk"/>
+                        <outlet property="buttonTwo" destination="qls-Kd-EUc" id="Jwh-Lj-Cok"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4d1-c8-AZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2441" y="1573"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xtu-3p-tGB">
+            <objects>
+                <viewController id="utP-CS-Xsn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mkI-UB-3kU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBV-GU-3Ai">
+                                <rect key="frame" x="20" y="288" width="374" height="322"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="It is a kitchen, and there is a bowl with a raw steak.   She eats the steak, and wake later in a room, without an open door. ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="28" name="Chalkduster"/>
+                                            <font key="NSOriginalFont" size="28" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zBV-GU-3Ai" firstAttribute="top" secondItem="0Q1-iW-yKd" secondAttribute="top" constant="91" id="tWY-kf-7eS"/>
+                            <constraint firstItem="zBV-GU-3Ai" firstAttribute="trailing" secondItem="mkI-UB-3kU" secondAttribute="trailingMargin" id="wge-LK-383"/>
+                            <constraint firstItem="zBV-GU-3Ai" firstAttribute="leading" secondItem="mkI-UB-3kU" secondAttribute="leadingMargin" id="wmg-as-H9s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Q1-iW-yKd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="o4w-yT-9e4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yy9-Td-hHA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3487" y="1357"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="x3A-Ha-aqs">
+            <objects>
+                <viewController id="7Ol-Zx-rwu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QHI-vP-89P" customClass="ViewController9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LmQ-ut-Njw">
+                                <rect key="frame" x="20" y="179" width="374" height="431"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="The door opens to a dense forest.   The tiger pads in. She knows no humans can follow. ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="28" name="Chalkduster"/>
+                                            <font key="NSOriginalFont" size="28" name="Chalkduster"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LmQ-ut-Njw" firstAttribute="top" secondItem="kVE-Ph-PMf" secondAttribute="top" constant="200" id="CR1-b6-aW6"/>
+                            <constraint firstItem="kVE-Ph-PMf" firstAttribute="bottom" secondItem="LmQ-ut-Njw" secondAttribute="bottom" constant="252" id="ICW-5Y-NBt"/>
+                            <constraint firstItem="LmQ-ut-Njw" firstAttribute="leading" secondItem="QHI-vP-89P" secondAttribute="leadingMargin" id="MRz-T0-gUv"/>
+                            <constraint firstItem="LmQ-ut-Njw" firstAttribute="top" secondItem="kVE-Ph-PMf" secondAttribute="top" constant="91" id="Ptp-i4-2gW"/>
+                            <constraint firstItem="LmQ-ut-Njw" firstAttribute="trailing" secondItem="QHI-vP-89P" secondAttribute="trailingMargin" id="Qlu-ay-qwh"/>
+                            <constraint firstItem="LmQ-ut-Njw" firstAttribute="centerX" secondItem="kVE-Ph-PMf" secondAttribute="centerX" id="gPN-RD-Wwl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kVE-Ph-PMf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vxr-Rk-3vi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="faM-bd-Yhn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3487" y="2092"/>
         </scene>
     </scenes>
 </document>
